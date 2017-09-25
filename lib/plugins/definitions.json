@@ -1,0 +1,47 @@
+{
+    "ApiError": {
+        "type": "object",
+        "properties": {
+            "errorCode": {
+                "type": "string"
+            },
+            "description": {
+                "type": "string"
+            },
+            "details": {
+                "type": [
+                    "object",
+                    "null"
+                ]
+            }
+        },
+        "required": [
+            "errorCode",
+            "description"
+        ]
+    },
+    "AppConfig": {
+        "type": "object",
+        "properties": {
+            "namespace": {
+                "type": "string",
+                "minLength": "1",
+                "description": "Unique namespace to identify configuration"
+            },
+            "description": {
+                "type": "string",
+                "minLength": "1",
+                "description": "Description about the configurations e.g. for which application is it meant for"
+            },
+            "data": {
+                "type": "object",
+                "description": "The configuration data in key value pairs."
+            }
+        },
+        "required": [
+            "namespace",
+            "description",
+            "data"
+        ]
+    }
+}

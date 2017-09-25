@@ -1,0 +1,70 @@
+{
+    "operationId": "configurations.update",
+    "method": "patch",
+    "path": "/configurations/:namespace",
+    "deprecated": false,
+    "userTypes": [],
+    "permissions": [],
+    "summary": "Updates configuration",
+    "isPublic": true,
+    "description": "Updates configurations for application or static messsages for any application with a unique namespace",
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "accepts": {
+        "params": {
+            "type": "object",
+            "properties": {
+                "namespace": {
+                    "type": "string",
+                    "minLength": "1",
+                    "description": "Namespace for which API needs to update"
+                }
+            },
+            "required": [
+                "namespace"
+            ]
+        },
+        "body": {
+            "type": "object",
+            "modelName": "configuration",
+            "description": "Configuration data with namespace, confguration in key value pair",
+            "properties": {
+                "data": {
+                    "type": "object",
+                    "additionalProperties": true,
+                    "description": "The configuration data in key value pairs."
+                }
+            },
+            "required": [
+                "data"
+            ]
+        }
+    },
+    "returns": {
+        "200": {
+            "description": "Configuration has been added successfully",
+            "schema": {
+                "$ref": "#/definitions/AppConfig"
+            }
+        },
+        "400": {
+            "description": "Invalid parameters",
+            "schema": {
+                "$ref": "#/definitions/ApiError"
+            }
+        },
+        "500": {
+            "description": "API return 500 if there is crash, DB connection issue, core service issue etc.",
+            "schema": {
+                "$ref": "#/definitions/ApiError"
+            }
+        }
+    },
+    "tags": [
+        "Configuration"
+    ]
+}

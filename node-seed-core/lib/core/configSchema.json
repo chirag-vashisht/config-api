@@ -1,0 +1,67 @@
+{
+    "type": "object",
+    "properties": {
+        "method": {
+            "type": "string"
+        },
+        "path": {
+            "type": "string"
+        },
+        "summary": {
+            "type": "string"
+        },
+        "isPublic": {
+            "type": "boolean"
+        },
+        "operationId": {
+            "type": "string"
+        },
+        "accepts": {
+            "type": "object"
+        },
+        "returns": {
+            "type": "object"
+        },
+        "tags": {
+            "type": "array",
+            "format": "nonEmptyArray",
+            "items": {
+                "type": "string"
+            }
+        },
+        "userTypes": {
+            "type": "array"
+        },
+        "permissions": {
+            "type": "array"
+        },
+        "deprecated": {
+            "type": "boolean"
+        },
+        "consumes": {
+            "type": "array",
+            "format": "nonEmptyArray",
+            "items": {
+                "type": "string"
+            }
+        },
+        "produces": {
+            "type": "array",
+            "format": "nonEmptyArray",
+            "items": {
+                "type": "string"
+            }
+        }
+    },
+    "required": [
+        "method",
+        "path",
+        "summary",
+        "isPublic",
+        "operationId",
+        "tags",
+        "deprecated",
+        "consumes",
+        "produces"
+    ]
+}

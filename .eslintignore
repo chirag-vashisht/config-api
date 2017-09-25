@@ -1,0 +1,10 @@
+/client/*
+/node_modules/*
+/reports/*
+/.nyc_output/*
+/coverage/*
+/mochawesome-reports/*
+*.log
+*.bak
+/mochawesome-report/*
+npm-debug.*

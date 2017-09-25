@@ -1,0 +1,12 @@
+node_modules
+coverage
+mochawesome-reports
+app.log*
+*.log*
+*.bak
+mochawesome-report
+npm-debug.*
+.vscode
+/complexity
+/.nyc_output
+config/development.json

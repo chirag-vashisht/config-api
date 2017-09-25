@@ -1,0 +1,55 @@
+{
+    "operationId": "configurations.get",
+    "method": "delete",
+    "path": "/configurations/:namespace",
+    "deprecated": false,
+    "userTypes": [],
+    "permissions": [],
+    "summary": "Delete configuration by namespace",
+    "isPublic": true,
+    "description": "Delete configurations for applications or static messsages for any application with a unique namespace",
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "accepts": {
+        "params": {
+            "type": "object",
+            "properties": {
+                "namespace": {
+                    "type": "string",
+                    "minLength": "1",
+                    "description": "Namespace for which API needs to be deleted"
+                }
+            },
+            "required": [
+                "namespace"
+            ]
+        }
+    },
+    "returns": {
+        "200": {
+            "description": "Configurations deleted successfully",
+            "schema": {
+                "$ref": "#/definitions/AppConfig"
+            }
+        },
+        "400": {
+            "description": "Invalid parameters",
+            "schema": {
+                "$ref": "#/definitions/ApiError"
+            }
+        },
+        "500": {
+            "description": "API return 500 if there is crash, DB connection issue, core service issue etc.",
+            "schema": {
+                "$ref": "#/definitions/ApiError"
+            }
+        }
+    },
+    "tags": [
+        "Configuration"
+    ]
+}

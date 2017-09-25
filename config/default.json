@@ -1,0 +1,21 @@
+{
+    "db": {
+        "url": "mongodb://localhost:27017/config-api",
+        "options": {
+            "server": {
+                "socketOptions": {
+                    "keepAlive": 100,
+                    "connectTimeoutMS": 30000
+                }
+            }
+        }
+    },
+    "server": {
+        "port": 4000,
+        "apiPath": "/api"
+    },
+    "logger": {
+        "level": 0
+    },
+    "enableSwagger": true
+}

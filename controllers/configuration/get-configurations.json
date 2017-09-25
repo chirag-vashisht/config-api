@@ -1,0 +1,44 @@
+{
+    "operationId": "configurations.get",
+    "method": "get",
+    "path": "/configurations",
+    "deprecated": false,
+    "userTypes": [],
+    "permissions": [],
+    "summary": "Get configurations",
+    "isPublic": true,
+    "description": "Gets configurations for applications or static messsages for any application with a unique namespace",
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "accepts": {},
+    "returns": {
+        "200": {
+            "description": "Configurations fetched successfully",
+            "schema": {
+                "type": "array",
+                "items": {
+                    "$ref": "#/definitions/AppConfig"
+                }
+            }
+        },
+        "400": {
+            "description": "Invalid parameters",
+            "schema": {
+                "$ref": "#/definitions/ApiError"
+            }
+        },
+        "500": {
+            "description": "API return 500 if there is crash, DB connection issue, core service issue etc.",
+            "schema": {
+                "$ref": "#/definitions/ApiError"
+            }
+        }
+    },
+    "tags": [
+        "Configuration"
+    ]
+}

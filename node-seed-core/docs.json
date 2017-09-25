@@ -1,0 +1,11 @@
+{
+  "content": [
+    {
+      "title": "Base Adapter",
+      "depth": 2
+    },
+    "lib/connector.js"
+  ],
+  "codeSectionDepth": 3
+}
+

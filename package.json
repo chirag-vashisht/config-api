@@ -1,0 +1,96 @@
+{
+  "name": "config-api",
+  "version": "0.0.0",
+  "description": "Configuration API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node node_modules/mocha/bin/_mocha test/**/**/*.js --reporter mochawesome",
+    "coverage": "nyc --check-coverage npm run test",
+    "lint": "eslint modules lib controllers test *.js",
+    "lint-fix": "eslint --fix modules lib controllers test *.js",
+    "postinstall": "npm install ./lib",
+    "nsp": "nsp check",
+    "complexity": "plato -r -d ./complexity lib controllers modules"
+  },
+  "keywords": [],
+  "author": "Chirag Vashisht",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "api-lib": "file:lib",
+    "async": "^2.3.0",
+    "aws-sdk": "^2.32.0",
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.1",
+    "bunyan": "^1.8.8",
+    "busboy": "^0.2.14",
+    "compression": "^1.6.2",
+    "config": "^1.25.1",
+    "cors": "^2.8.4",
+    "debug": "^2.6.3",
+    "elasticsearch": "^13.0.0-rc2",
+    "error-stack-parser": "^2.0.1",
+    "express": "^4.15.2",
+    "http-status-codes": "^1.1.6",
+    "joi": "^10.2.2",
+    "jsonwebtoken": "^7.4.1",
+    "lodash": "^4.17.4",
+    "mongoose": "^4.8.6",
+    "newrelic": "^2.1.0",
+    "node-seed-core": "file:node-seed-core",
+    "raven": "^2.1.2",
+    "request": "^2.81.0",
+    "s3-upload-stream": "^1.0.7",
+    "soap": "^0.19.2",
+    "superagent": "^3.5.2",
+    "uuid": "^3.0.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.1",
+    "chai-http": "^3.0.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-smells": "^1.0.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "mochawesome": "^2.0.4",
+    "nodemon": "^1.11.0",
+    "nsp": "^2.7.0",
+    "nyc": "^11.1.0",
+    "plato": "^1.7.0",
+    "proxyquire": "^1.7.11",
+    "sinon": "^2.2.0",
+    "superagent-mocker": "^0.5.2",
+    "swagger-jsdoc": "^1.9.2"
+  },
+  "nyc": {
+    "all": true,
+    "exclude": [
+      "coverage",
+      "test",
+      "node_modules",
+      "complexity",
+      "**model**"
+    ],
+    "include": [
+      "modules",
+      "controllers"
+    ],
+    "reporter": [
+      "html",
+      "lcov",
+      "clover",
+      "text-summary"
+    ],
+    "lines": 85,
+    "statements": 85,
+    "functions": 85,
+    "branches": 85,
+    "report-dir": "./coverage"
+  }
+}
