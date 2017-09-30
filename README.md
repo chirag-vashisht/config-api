@@ -6,7 +6,7 @@ API for managing configurations
 1. MongoDB - Application database
 
 # Quick Start
-1. Clone the repository (git clone https://github.com/Monotype/MLSCoreService.git).
+1. Clone the repository (git clone https://github.com/chirag-vashisht/config-api.git).
 2. To run the application, you will have to get the config file from one of the contributors. The file has not been checked in as it contains sensitive information.
 3. Switch to application directory. 
 4. Run `npm install`.
