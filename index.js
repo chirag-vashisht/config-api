@@ -4,7 +4,6 @@ require('node-seed-core')
     .globalConfigure(lib.plugins.validationFormats,
     lib.plugins.schemaDefinitions);
 const express = require('express');
-const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const config = require('config');
 const compression = require('compression');
@@ -58,35 +57,18 @@ app.use(lib.middlewares.responseHandler.OkHandler);
 app.use(lib.middlewares.responseHandler.ErrorHandler);
 
 //  boot server
-const connectAsync = Promise.promisify(mongoose.connect, {
-    context: mongoose,
-});
 const listenAsync = Promise.promisify(app.listen, {
     context: app,
 });
 
 //  Connect to database
-const db = config.get('db');
-connectAsync(db.url, db.options)
-    .then(() =>
-        listenAsync(config.get('server.port'))
-    ).then(() => {
 
-    }).catch((err) => {
-        throw err;
-    });
+listenAsync(config.get('server.port')).then(() => {
 
-mongoose.connection.on('connected', () => {
-});
-
-mongoose.connection.on('error', () => {
-});
-
-mongoose.connection.on('disconnected', () => {
+}).catch((err) => {
+    throw err;
 });
 
 process.on('SIGINT', () => {
-    mongoose.connection.close(() => {
-        process.exit(0);
-    });
+
 });

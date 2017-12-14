@@ -43,5 +43,25 @@
             "description",
             "data"
         ]
+    },
+    "Trade": {
+        "type": "object",
+        "properties": {
+            "TxnId": {
+                "type": "number"
+            },
+            "Symbol": {
+                "type": "string"
+            },
+            "Action": {
+                "type": "string"
+            },
+            "Quantity": {
+                "type": "number"
+            },
+            "Price": {
+                "type": "number"
+            }
+        }
     }
 }

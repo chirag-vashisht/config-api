@@ -1,0 +1,44 @@
+{
+    "operationId": "trades.get",
+    "method": "get",
+    "path": "/trades",
+    "deprecated": false,
+    "userTypes": [],
+    "permissions": [],
+    "summary": "Get trades",
+    "isPublic": true,
+    "description": "Gets trades data in sorted manner",
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "accepts": {},
+    "returns": {
+        "200": {
+            "description": "Trades fetched successfully",
+            "schema": {
+                "type": "array",
+                "items": {
+                    "$ref": "#/definitions/Trade"
+                }
+            }
+        },
+        "400": {
+            "description": "Invalid parameters",
+            "schema": {
+                "$ref": "#/definitions/ApiError"
+            }
+        },
+        "500": {
+            "description": "API return 500 if there is crash, DB connection issue, core service issue etc.",
+            "schema": {
+                "$ref": "#/definitions/ApiError"
+            }
+        }
+    },
+    "tags": [
+        "Trades"
+    ]
+}

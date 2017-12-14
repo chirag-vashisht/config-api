@@ -1,0 +1,95 @@
+{
+  "trades": [
+    {
+      "TxnId": 3,
+      "Symbol": "IBM",
+      "Action": "Buy",
+      "Quantity": 100,
+      "Price": 50
+    },
+    {
+      "TxnId": 5,
+      "Symbol": "XOM",
+      "Action": "Buy",
+      "Quantity": 90,
+      "Price": 40
+    },
+    {
+      "TxnId": 1,
+      "Symbol": "IBM",
+      "Action": "Buy",
+      "Quantity": 200,
+      "Price": 51
+    },
+    {
+      "TxnId": 4,
+      "Symbol": "IBM",
+      "Action": "Sell",
+      "Quantity": 150,
+      "Price": 52
+    },
+    {
+      "TxnId": 2,
+      "Symbol": "XOM",
+      "Action": "Buy",
+      "Quantity": 80,
+      "Price": 41
+    },
+    {
+      "TxnId": 6,
+      "Symbol": "XOM",
+      "Action": "Sell",
+      "Quantity": 70,
+      "Price": 43
+    },
+    {
+      "TxnId": 7,
+      "Symbol": "BAC",
+      "Action": "Buy",
+      "Quantity": 1000,
+      "Price": 15
+    },
+    {
+      "TxnId": 8,
+      "Symbol": "XOM",
+      "Action": "Buy",
+      "Quantity": 20,
+      "Price": 43
+    },
+    {
+      "TxnId": 9,
+      "Symbol": "IBM",
+      "Action": "Buy",
+      "Quantity": 100,
+      "Price": 53
+    },
+    {
+      "TxnId": 10,
+      "Symbol": "IBM",
+      "Action": "Sell",
+      "Quantity": 50,
+      "Price": 54
+    },
+    {
+      "TxnId": 11,
+      "Symbol": "XOM",
+      "Action": "Sell",
+      "Quantity": 120,
+      "Price": 44
+    },
+    {
+      "TxnId": 12,
+      "Symbol": "BAC",
+      "Action": "Sell",
+      "Quantity": 250,
+      "Price": 12
+    },
+    {
+      "TxnId": 13,
+      "Symbol": "IBM",
+      "Action": "Sell",
+      "Quantity": 200,
+      "Price": 55
+    }
+  ]
+}
